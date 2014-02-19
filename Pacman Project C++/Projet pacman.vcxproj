@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{712C9F65-31FF-4479-B3CD-2C632F923502}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\program files\imagine++\include;c:\program files\imagine++\include\vtk-5.6;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opengl32.lib;vfw32.lib;wxbase29ud.lib;wxmsw29ud_core.lib;wxpngd.lib;wxtiffd.lib;wxjpegd.lib;wxzlibd.lib;wxregexud.lib;wxexpatd.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;vtkRendering.lib;vtkHybrid.lib;vtkWidgets.lib;ImagineGraphicsd.lib;mkl_core_dll.lib;mkl_intel_c_dll.lib;mkl_intel_thread_dll.lib;vtkHybrid.lib;vtkRendering.lib;vtkGraphics.lib;vtkverdict.lib;vtkImaging.lib;vtkftgl.lib;vtkfreetype.lib;opengl32.lib;vtkIO.lib;vtkFiltering.lib;vtkCommon.lib;vtkDICOMParser.lib;vtkmetaio.lib;vtksqlite.lib;vtkpng.lib;vtktiff.lib;vtkzlib.lib;vtkjpeg.lib;vtkexpat.lib;vtksys.lib;ws2_32.lib;vtkexoIIc.lib;vtkNetCDF.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\program files\imagine++\lib;c:\program files\imagine++\lib\vtk-5.6;c:\program files\imagine++\ia32\lib;c:\program files\imagine++\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/machine:i386 %(AdditionalOptions)</AdditionalOptions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>c:\program files\imagine++\include;c:\program files\imagine++\include\vtk-5.6;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;opengl32.lib;vfw32.lib;mkl_core_dll.lib;mkl_intel_c_dll.lib;mkl_intel_thread_dll.lib;wxbase29u.lib;wxmsw29u_core.lib;wxpng.lib;wxtiff.lib;wxjpeg.lib;wxzlib.lib;wxregexu.lib;wxexpat.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;vtkRendering.lib;vtkHybrid.lib;vtkWidgets.lib;ImagineGraphics.lib;vtkHybrid.lib;vtkRendering.lib;vtkGraphics.lib;vtkverdict.lib;vtkImaging.lib;vtkftgl.lib;vtkfreetype.lib;opengl32.lib;vtkIO.lib;vtkFiltering.lib;vtkCommon.lib;vtkDICOMParser.lib;vtkmetaio.lib;comctl32.lib;wsock32.lib;vtksqlite.lib;vtkpng.lib;vtktiff.lib;vtkzlib.lib;vtkjpeg.lib;vtkexpat.lib;vtksys.lib;ws2_32.lib;vtkexoIIc.lib;vtkNetCDF.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>c:\program files\imagine++\lib;c:\program files\imagine++\lib\vtk-5.6;c:\program files\imagine++\ia32\lib;c:\program files\imagine++\lib\vc_dll;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/machine:i386 %(AdditionalOptions)</AdditionalOptions>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="fantome.cpp" />
+    <ClCompile Include="pacman.cpp" />
+    <ClCompile Include="Projet pacman.cpp" />
+    <ClCompile Include="scorevies.cpp" />
+    <ClCompile Include="terrain.cpp" />
+    <ClCompile Include="utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="fantome.h" />
+    <ClInclude Include="pacman.h" />
+    <ClInclude Include="scorevies.h" />
+    <ClInclude Include="terrain.h" />
+    <ClInclude Include="utils.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
